@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sweet Valentine 💖</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#ff9a9e,#fecfef);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+section{
+padding:60px 20px;
+}
+
+.card{
+background:rgba(255,255,255,0.15);
+padding:30px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+max-width:400px;
+margin:auto;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+button{
+padding:12px 25px;
+border:none;
+border-radius:25px;
+background:#ff4b6e;
+color:white;
+font-size:16px;
+cursor:pointer;
+margin-top:15px;
+}
+
+button:hover{
+background:#e6004c;
+}
+
+#pesan{
+display:none;
+font-size:20px;
+margin-top:15px;
+}
+
+img{
+width:180px;
+border-radius:15px;
+margin:10px;
+}
+
+/* hati jatuh */
+.heart{
+position:fixed;
+top:-10px;
+font-size:18px;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+to{
+transform:translateY(100vh);
+opacity:0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<section>
+<div class="card">
+<h1>Happy Valentine 💕</h1>
+<p>KENNES CUU 😆</p>
+<img src="cc.png.jpeg">
+</div>
+</section>
+
+<section>
+<div class="card">
+<h2>Cerita Kita 💌</h2>
+<p>
+Dari awal kenal sampai sekarang,sudah 
+banyak momen yang kita lewatin mulai
+dari yang bikin senyum,ketawa bareng,hal"kecil
+yang jadi kenangn,awal kita berantem
+dan bahkan sampai ada acara nangi-nangisan"lah.
+segala cerita yang akan datang nanti,aku harap kita 
+tetap saling genggam dan nggak mudah menyerah.
+makasih sudah ngisi hitam,putih,abu-abu ini  🤍
+</p>
+</div>
+</section>
+<section>
+<div class="card">
+<h2>Galeri Mini 📸
+</h2>jangan ngarep banyak kita jarang foto wkwkwk
+<img src="cd..jpeg">
+<img src="ce..jpeg">
+</div>
+</section>
+
+<section>
+<div class="card">
+<h2>maafin aku yaa ga bisa nemenin kamu 
+di hari yang kayak gini,sebagai gantinya aku ada
+hadiah buat kamu kok😳</h2>
+<button onclick="tampil()">Klik di sini 💌</button>
+<div id="pesan">
+mampus kena tipu,gimana coba kirim hadiah lewat leptop 😆
+</div>
+</div>
+</section>
+
+<section>
+<div class="card">
+<h2>sekian dari anak punk 🌸</h2>
+<p>
+Terima kasih sudah jadi bagian spesial
+di hidupku 🤍 semoga kita selalu
+punya banyak momen indah bersama,maaf yaa
+kalok Valentine tahun ini aku ga bisa di sampingmu💖
+</p>
+</div>
+</section>
+
+<audio autoplay loop>
+<source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function tampil(){
+document.getElementById("pesan").style.display="block";
+}
+
+/* efek hati jatuh pelan */
+setInterval(()=>{
+const heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="💗";
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(Math.random()*4+4)+"s";
+document.body.appendChild(heart);
+setTimeout(()=>heart.remove(),8000);
+},800);
+</script>
+
+</body>
+</html>
